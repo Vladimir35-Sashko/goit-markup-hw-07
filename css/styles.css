@@ -52,7 +52,7 @@ img {
 
   border-bottom: 1px solid #ececec;
 }
-.header .header-conteiner {
+.header .header__container {
   display: flex;
   align-items: center;
 }
@@ -66,7 +66,29 @@ img {
   display: flex;
   align-items: center;
 }
+.logo {
+  margin-right: 93px;
+  font-family: var(--secondary-font);
 
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  letter-spacing: 0.03em;
+
+  color: #000000;
+}
+.logo__accent-text {
+  font-family: var(--secondary-font);
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.19x;
+
+  letter-spacing: 0.03em;
+
+  color: var(--accent-color);
+}
 .navigation-list {
   display: flex;
   align-items: center;
@@ -74,10 +96,13 @@ img {
   padding: 0;
 }
 
-.navigation-item:not(:last-child) {
+.navigation-list__item:not(:last-child) {
   margin-right: 50px;
 }
-.navigation-link {
+.navigation-list .navigation-list__item {
+  position: relative;
+}
+.navigation-list__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -90,10 +115,11 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
-.navigation-list .navigation-item {
-  position: relative;
+.navigation-list__link:hover,
+.navigation-list__link:focus {
+  color: var(--accent-color);
 }
-.active-nav-link::after {
+.navigation-list__link--active::after {
   content: "";
   position: absolute;
   display: block;
@@ -104,33 +130,7 @@ img {
   border-radius: 2px;
   background: var(--accent-color);
 }
-.navigation-link:hover,
-.navigation-link:focus {
-  color: var(--accent-color);
-}
-.web {
-  font-family: var(--secondary-font);
 
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 1.19x;
-
-  letter-spacing: 0.03em;
-
-  color: var(--accent-color);
-}
-.logo-link {
-  margin-right: 93px;
-  font-family: var(--secondary-font);
-
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-
-  letter-spacing: 0.03em;
-
-  color: #000000;
-}
 .header-contact-list {
   display: flex;
   align-items: center;
@@ -138,26 +138,12 @@ img {
   margin-left: auto;
   padding: 0;
 }
-.header-contact-list-item {
+.header-contact-list__item {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-.envelope {
-  display: flex;
-  align-items: center;
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  transition-property: fill;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.envelope:focus,
-.envelope:hover {
-  fill: var(--accent-color);
-}
-
-.mail-link {
+.header-contact-list__mail-link {
   align-items: center;
   display: flex;
   padding: 32px 0;
@@ -173,25 +159,12 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
-.mail-link:hover,
-.mail-link:focus {
+.header-contact-list__mail-link:hover,
+.header-contact-list__mail-link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
-.smartfone {
-  display: flex;
-  align-items: center;
-  width: 10px;
-  height: 12px;
-  margin-right: 10px;
-  transition-property: fill;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.smartfone:hover,
-.smartfone:focus {
-  fill: var(--accent-color);
-}
-.tel-link {
+.header-contact-list__tel-link {
   align-items: center;
   display: flex;
   padding: 32px 0;
@@ -205,11 +178,17 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
-.tel-link:hover,
-.tel-link:focus {
+.header-contact-list__tel-link:hover,
+.header-contact-list__tel-link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
+.header-contact-list__icon {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
 /* ============================КОНЕЦ ШАПКИ========================== */
 
 /* ===========================ГЛАВНАЯ СТУДИЯ=============================== */
