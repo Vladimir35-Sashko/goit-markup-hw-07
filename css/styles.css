@@ -860,21 +860,21 @@ img {
 /* ======================Конец модального окна============== */
 
 /* =========================ГЛАВНАЯ ПОРТФОЛИО================== */
-.nav-btn {
+.navigation-button-set {
   margin: 0;
   padding: 94px 0;
 }
-.nav-btn-list {
+.navigation-button-set-list {
   display: flex;
 
   justify-content: center;
   margin: 0 0 50px 0;
   padding: 0;
 }
-.navigation-btn-list-item:not(:last-child) {
+.navigation-button-set-list__item:not(:last-child) {
   margin-right: 8px;
 }
-.nav-btn-list-but {
+.navigation-button-set-list__btn {
   display: block;
   padding: 6px 22px;
   font-weight: 500;
@@ -890,8 +890,8 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-btn-list-but:hover,
-.nav-btn-list-but:focus {
+.navigation-button-set-list__btn:hover,
+.navigation-button-set-list__btn:focus {
   background: var(--accent-color);
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -905,19 +905,23 @@ img {
   padding-top: 34px;
   padding-bottom: 94px;
 }
-.elements-list-item {
+.elements-list__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
   border: 1px solid #eee;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.elements-list-img {
+.elements-list__item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.elements-list__img {
   display: block;
   align-items: center;
   max-width: 100%;
 }
-.elements-list-discribe {
+.elements-list__discribe {
   position: relative;
   overflow: hidden;
 }
@@ -945,15 +949,15 @@ img {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.elements-list-link:focus .overlay,
-.elements-list-link:hover .overlay {
+.elements-list__link:focus .overlay,
+.elements-list__link:hover .overlay {
   transform: translateY(0%);
 }
-.elements-list-wrapper {
+.elements-list__wrapper {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.elements-list-title {
+.elements-list__title {
   margin: 0 0 4px 0;
   padding: 0 24px;
   font-weight: 700;
@@ -964,7 +968,7 @@ img {
 
   color: #212121;
 }
-.elements-list-progects {
+.elements-list__progects {
   padding: 0 24px;
   font-weight: normal;
   font-size: 16px;
@@ -974,8 +978,5 @@ img {
 
   color: #757575;
 }
-.elements-list-item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 /* ======================КОНЕЦ ГЛАВНОЙ ПОРТФОЛИО=============== */
